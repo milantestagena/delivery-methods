@@ -1,0 +1,22 @@
+.panel-title{
+    display: flex;
+}
+
+.range-row{
+    margin-bottom: 15px;
+}
+
+.delivery-options .form-inline .form-control{
+    width: 35%;
+}
+
+.panel-group{
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+}
+.panel-body{
+    border: 1px solid #ddd;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
