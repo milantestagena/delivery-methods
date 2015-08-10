@@ -115,9 +115,10 @@ class DeliveryMethods {
     }
 
     private function deleteData($exists) {
-        $deleteQuery = "DELETE FROM delivery_method WHERE id NOT IN (" . implode(", ", $exists) . ")";
+        $deleteQuery = "DELETE dm.*, r.* FROM delivery_method as dm LEFT JOIN delivery_range as r on dm.id = r.delivery_method_id WHERE id NOT IN (" . implode(", ", $exists) . ")";
         $delete = $this->db->prepare($deleteQuery);
         $delete->execute();
+
     }
 
     public function validate($data) {
